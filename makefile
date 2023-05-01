@@ -8,4 +8,3 @@ build_and_run:
 
 build:
 	docker build -t temphia_buildpack .
-publish:
