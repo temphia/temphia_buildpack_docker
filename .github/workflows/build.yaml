@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 
 env:
   DOCKER_IMAGE_NAME: temphia_buildpack
-  DOCKER_IMAGE_TAG: ${{ github.sha }}
+  DOCKER_IMAGE_TAG: latest
 
 jobs:
   build-and-publish:
@@ -27,8 +27,8 @@ jobs:
 
       - name: Tag Docker image
         run: |
-          docker tag $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG ghcr.io/${{ github.repository }}/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
+          docker tag $DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG ghcr.io/temphia/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
 
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository }}/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
+          docker push ghcr.io/temphia/$DOCKER_IMAGE_NAME:$DOCKER_IMAGE_TAG
