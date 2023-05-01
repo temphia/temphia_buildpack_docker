@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
 LABEL maintainer="bornjre <bornjre@gmail.com>"
+LABEL org.opencontainers.image.source https://github.com/temphia/temphia_buildpack_docker
 
 VOLUME ["work", "work"]
 
