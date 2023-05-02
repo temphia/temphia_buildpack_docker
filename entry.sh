@@ -2,12 +2,10 @@
 
 set -e
 
-echo "@buildpack"
-
 ls -lah /work
+
+echo "@buildpack running |> $@"
 
 cd work
 
-cmd="$1"
-shift
-exec "$cmd" "$@"
+$@
