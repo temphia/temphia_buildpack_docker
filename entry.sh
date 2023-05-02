@@ -2,6 +2,9 @@
 
 set -e
 
+source ~/.bashrc
+. $HOME/.asdf/asdf.sh
+
 ls -lah /work
 
 echo "@buildpack running |> $@"
